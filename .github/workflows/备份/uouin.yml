@@ -33,7 +33,6 @@ jobs:
           import os
           import re
           import ipaddress
-          import time
 
           def is_valid_ipv4(ip_str):
               try:
@@ -42,28 +41,15 @@ jobs:
                   return False
 
           def fetch_and_parse():
-              # --- 仅修改抓取逻辑以提高稳定性 ---
               scraper = cloudscraper.create_scraper(
                   browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True}
               )
-              url = "https://api.uouin.com/cloudflare.html"
-              headers = {
-                  'Referer': 'https://api.uouin.com/',
-                  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
-              }
+              url = "https://v2rayssr.com/cfip/"
               
               try:
-                  res = None
-                  for i in range(3):
-                      response = scraper.get(url, headers=headers, timeout=30)
-                      if response.status_code == 200 and "<td>" in response.text:
-                          res = response
-                          break
-                      time.sleep(5)
-
-                  if not res:
+                  res = scraper.get(url, timeout=30)
+                  if res.status_code != 200:
                       return False
-                  # --------------------------------
 
                   soup = BeautifulSoup(res.text, 'html.parser')
                   table = soup.find('table')
@@ -93,16 +79,12 @@ jobs:
                           if not valid_ip:
                               continue
 
-                          latency = cols[3].get_text(strip=True)
-                          speed = cols[4].get_text(strip=True)
+                          latency = cols[4].get_text(strip=True)
+                          speed = cols[5].get_text(strip=True)
                           
                           formatted = f"{valid_ip}:443#{line} | {valid_ip} | {latency} | {speed}"
                           new_nodes.append(formatted)
 
-                  if not new_nodes:
-                      print("未能提取到有效数据，停止更新。")
-                      return False
-                      
                   output_path = os.path.join("uouin", "all.txt")
                   old_nodes = []
                   if os.path.exists(output_path):
