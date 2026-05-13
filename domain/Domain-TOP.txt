@@ -97,12 +97,9 @@ chess.com
 chrono24.com
 cloudflare.dev
 cloudflare-eth.com
-cloudflare.com
 cloudflare-ech.com
 cloudbackup.management
-cloudflareportal.com
 cloudpath.live
-cloudflareok.com
 comix.to
 crcldu.com
 crunchyroll.com
