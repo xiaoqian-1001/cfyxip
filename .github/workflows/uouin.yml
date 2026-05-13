@@ -44,7 +44,7 @@ jobs:
               scraper = cloudscraper.create_scraper(
                   browser={'browser': 'chrome', 'platform': 'windows', 'desktop': True}
               )
-              url = "https://api.uouin.com/cloudflare.html"
+              url = "view-source:https://api.uouin.com/cloudflare.html"
               
               try:
                   res = scraper.get(url, timeout=30)
