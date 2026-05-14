@@ -1,4 +1,4 @@
-saas.sin.fan:443#▼ 优选域名 TOP100 | 05-15 03:43 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP100 | 05-15 04:13 | YouTube@真香定律
 cfgo.timelate.com:443#cfgo.timelate.com
 yg5.ygkkk.dpdns.org:443#yg5.ygkkk.dpdns.org
 cloudflare.idc.rocks:443#cloudflare.idc.rocks
@@ -8,6 +8,7 @@ markmonitor.com:443#markmonitor.com
 cf1.v8.longsays.com:443#cf1.v8.longsays.com
 cdn.091224.xyz:443#cdn.091224.xyz
 cf.3666888.xyz:443#cf.3666888.xyz
+4.cf.3666888.xyz:443#4.cf.3666888.xyz
 www.dg22.top:443#www.dg22.top
 test2.509666.xyz:443#test2.509666.xyz
 staticdelivery.nexusmods.com:443#staticdelivery.nexusmods.com
@@ -18,12 +19,13 @@ www.xiaoshuofen.com:443#www.xiaoshuofen.com
 www.sloomb.com:443#www.sloomb.com
 cdn.204910.best:443#cdn.204910.best
 vip.cf.3666888.xyz:443#vip.cf.3666888.xyz
-4.cf.3666888.xyz:443#4.cf.3666888.xyz
 7.cf.3666888.xyz:443#7.cf.3666888.xyz
 yg1.ygkkk.dpdns.org:443#yg1.ygkkk.dpdns.org
+yg7.ygkkk.dpdns.org:443#yg7.ygkkk.dpdns.org
 cnllm.com:443#cnllm.com
 www.shopify.com:443#www.shopify.com
 openai.com:443#openai.com
+cu.877774.xyz:443#cu.877774.xyz
 store.ubi.com:443#store.ubi.com
 bbs.alipansou.com:443#bbs.alipansou.com
 cdn.262832.xyz:443#cdn.262832.xyz
@@ -39,13 +41,11 @@ yg9.ygkkk.dpdns.org:443#yg9.ygkkk.dpdns.org
 www.nexusmods.com:443#www.nexusmods.com
 cmcc.cc.cd:443#cmcc.cc.cd
 zeas.top:443#zeas.top
-api.gzcrtw.com:443#api.gzcrtw.com
 cfip-avg.stoeaves.us.ci:443#cfip-avg.stoeaves.us.ci
 cloudflare.182682.xyz:443#cloudflare.182682.xyz
 cloudflare-ip.mofashi.ltd:443#cloudflare-ip.mofashi.ltd
 cloudflare.cfgo.cc:443#cloudflare.cfgo.cc
 saas.sin.fan:443#saas.sin.fan
-cu.877774.xyz:443#cu.877774.xyz
 www.5199dy.com:443#www.5199dy.com
 nexusmods.com:443#nexusmods.com
 dnew.cc:443#dnew.cc
@@ -64,7 +64,6 @@ hfqek.cf.3666888.xyz:443#hfqek.cf.3666888.xyz
 5.cf.3666888.xyz:443#5.cf.3666888.xyz
 10.cf.3666888.xyz:443#10.cf.3666888.xyz
 test.509666.xyz:443#test.509666.xyz
-yg7.ygkkk.dpdns.org:443#yg7.ygkkk.dpdns.org
 eii.at:443#eii.at
 idc.urkeji.com:443#idc.urkeji.com
 www.cdzxdz.com:443#www.cdzxdz.com
@@ -73,7 +72,7 @@ www.mfyx.cn:443#www.mfyx.cn
 y508.com:443#y508.com
 www.giannidelprete.it:443#www.giannidelprete.it
 prompt.gzcrtw.com:443#prompt.gzcrtw.com
-cfip-ct.stoeaves.us.ci:443#cfip-ct.stoeaves.us.ci
+www.ntu.edu.sg:443#www.ntu.edu.sg
 www.5h.com:443#www.5h.com
 fw8je9.cf.3666888.xyz:443#fw8je9.cf.3666888.xyz
 ct.721660.xyz:443#ct.721660.xyz
@@ -88,9 +87,9 @@ yg11.ygkkk.dpdns.org:443#yg11.ygkkk.dpdns.org
 baka.fun:443#baka.fun
 www.mlkj888.com:443#www.mlkj888.com
 hzytjy.cn:443#hzytjy.cn
-yyurl.cc:443#yyurl.cc
+api.gzcrtw.com:443#api.gzcrtw.com
+cfip-ct.stoeaves.us.ci:443#cfip-ct.stoeaves.us.ci
 play.mc.js.cool:443#play.mc.js.cool
-www.ntu.edu.sg:443#www.ntu.edu.sg
 snipaste5.speedip.eu.org:443#snipaste5.speedip.eu.org
 cdn.2020111.xyz:443#cdn.2020111.xyz
 cf.zhetengsha.eu.org:443#cf.zhetengsha.eu.org
@@ -99,4 +98,5 @@ www.fastsoso.cn:443#www.fastsoso.cn
 youxuan.cf.3666888.xyz:443#youxuan.cf.3666888.xyz
 youxuan.cf.636949.xyz:443#youxuan.cf.636949.xyz
 uac.cf.3666888.xyz:443#uac.cf.3666888.xyz
+www.swowd.com:443#www.swowd.com
 bestcf.030101.xyz:443#▲ 优选域名 | 分享免费优选网 BestCF.pages.dev | VPS789 7*24监测
