@@ -118,6 +118,8 @@ jobs:
                 location="大马榴莲 | MY"
             elif [[ "$remark" =~ "越南" || "$remark" =~ "VN" || "$remark" =~ "🇻🇳" ]]; then 
                 location="西贡咖啡 | VN"
+            elif [[ "$remark" =~ "印度尼西亚" || "$remark" =~ "印尼" || "$remark" =~ "ID" || "$remark" =~ "🇮🇩" ]]; then 
+                location="印尼捞面 | ID"    
             elif [[ "$remark" =~ "菲律宾" || "$remark" =~ "PH" || "$remark" =~ "🇵🇭" ]]; then 
                 location="菲常好喝 | PH"
             elif [[ "$remark" =~ "泰国" || "$remark" =~ "TH" || "$remark" =~ "🇹🇭" ]]; then 
