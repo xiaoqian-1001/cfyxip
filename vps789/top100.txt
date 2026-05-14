@@ -1,16 +1,16 @@
-saas.sin.fan:443#▼ 优选域名 TOP100 | 05-15 05:12 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP100 | 05-15 05:43 | YouTube@真香定律
 cfgo.timelate.com:443#cfgo.timelate.com
 yg5.ygkkk.dpdns.org:443#yg5.ygkkk.dpdns.org
 cloudflare.idc.rocks:443#cloudflare.idc.rocks
 cf.mubaiovo.top:443#cf.mubaiovo.top
 y508.com:443#y508.com
-markmonitor.com:443#markmonitor.com
 6.cf.3666888.xyz:443#6.cf.3666888.xyz
 cf1.v8.longsays.com:443#cf1.v8.longsays.com
+staticdelivery.nexusmods.com:443#staticdelivery.nexusmods.com
 cf.3666888.xyz:443#cf.3666888.xyz
 4.cf.3666888.xyz:443#4.cf.3666888.xyz
+markmonitor.com:443#markmonitor.com
 test2.509666.xyz:443#test2.509666.xyz
-staticdelivery.nexusmods.com:443#staticdelivery.nexusmods.com
 cfvip.cf.3666888.xyz:443#cfvip.cf.3666888.xyz
 cloudflare.rainyfall.com:443#cloudflare.rainyfall.com
 3.cf.3666888.xyz:443#3.cf.3666888.xyz
@@ -19,8 +19,8 @@ www.xiaoshuofen.com:443#www.xiaoshuofen.com
 www.sloomb.com:443#www.sloomb.com
 www.dg22.top:443#www.dg22.top
 cdn.204910.best:443#cdn.204910.best
+nexusmods.com:443#nexusmods.com
 vip.cf.3666888.xyz:443#vip.cf.3666888.xyz
-7.cf.3666888.xyz:443#7.cf.3666888.xyz
 yg1.ygkkk.dpdns.org:443#yg1.ygkkk.dpdns.org
 yg7.ygkkk.dpdns.org:443#yg7.ygkkk.dpdns.org
 cnllm.com:443#cnllm.com
@@ -33,11 +33,13 @@ bbs.alipansou.com:443#bbs.alipansou.com
 cdn.262832.xyz:443#cdn.262832.xyz
 www.mc.js.cool:443#www.mc.js.cool
 sanwang.cf.3666888.xyz:443#sanwang.cf.3666888.xyz
+hk.cf.3666888.xyz:443#hk.cf.3666888.xyz
 sg.cf.3666888.xyz:443#sg.cf.3666888.xyz
 jp.cf.3666888.xyz:443#jp.cf.3666888.xyz
 cf.cf.3666888.xyz:443#cf.cf.3666888.xyz
 123.cf.3666888.xyz:443#123.cf.3666888.xyz
 avido.cf.3666888.xyz:443#avido.cf.3666888.xyz
+7.cf.3666888.xyz:443#7.cf.3666888.xyz
 9.cf.3666888.xyz:443#9.cf.3666888.xyz
 yg9.ygkkk.dpdns.org:443#yg9.ygkkk.dpdns.org
 www.nexusmods.com:443#www.nexusmods.com
@@ -51,13 +53,11 @@ cloudflare.182682.xyz:443#cloudflare.182682.xyz
 cloudflare.cfgo.cc:443#cloudflare.cfgo.cc
 saas.sin.fan:443#saas.sin.fan
 www.5199dy.com:443#www.5199dy.com
-nexusmods.com:443#nexusmods.com
 dnew.cc:443#dnew.cc
 www.jimdo.com:443#www.jimdo.com
 www.5h.com:443#www.5h.com
 cdn.cf.3666888.xyz:443#cdn.cf.3666888.xyz
 keji.cf.3666888.xyz:443#keji.cf.3666888.xyz
-hk.cf.3666888.xyz:443#hk.cf.3666888.xyz
 cfyx.qdqqd.com:443#cfyx.qdqqd.com
 2.cf.3666888.xyz:443#2.cf.3666888.xyz
 qocu.cf.3666888.xyz:443#qocu.cf.3666888.xyz
@@ -73,13 +73,14 @@ www.cdzxdz.com:443#www.cdzxdz.com
 www.mfyx.cn:443#www.mfyx.cn
 101yaoye.com:443#101yaoye.com
 www.giannidelprete.it:443#www.giannidelprete.it
+fk.hshwk.org:443#fk.hshwk.org
 prompt.gzcrtw.com:443#prompt.gzcrtw.com
+cf.v8.longsays.com:443#cf.v8.longsays.com
 www.ntu.edu.sg:443#www.ntu.edu.sg
 fw8je9.cf.3666888.xyz:443#fw8je9.cf.3666888.xyz
 www.6i5.com:443#www.6i5.com
 ct.721660.xyz:443#ct.721660.xyz
 freeyx.cloudflare88.eu.org:443#freeyx.cloudflare88.eu.org
-cf.v8.longsays.com:443#cf.v8.longsays.com
 cf.godns.cc:443#cf.godns.cc
 www.leics.police.uk:443#www.leics.police.uk
 cf1s.cf.3666888.xyz:443#cf1s.cf.3666888.xyz
@@ -89,7 +90,6 @@ yg11.ygkkk.dpdns.org:443#yg11.ygkkk.dpdns.org
 baka.fun:443#baka.fun
 www.mlkj888.com:443#www.mlkj888.com
 hzytjy.cn:443#hzytjy.cn
-fk.hshwk.org:443#fk.hshwk.org
 cf.553314.xyz:443#cf.553314.xyz
 cfip-ct.stoeaves.us.ci:443#cfip-ct.stoeaves.us.ci
 play.mc.js.cool:443#play.mc.js.cool
