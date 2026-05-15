@@ -1577,7 +1577,41 @@
         </div>		
     </section>				
 	<section id="khd">
-        <h2>客户端</h2>      
+        <h2>客户端</h2>
+<style>
+    .client-table-box { width: 100%; margin-top: 10px; }
+    .client-table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+    .client-table th { color: var(--text-muted); font-size: 0.75rem; font-weight: 600; padding: 10px 4px; text-align: center; border-bottom: 1px solid var(--border-color); white-space: nowrap; }
+    .client-table th:first-child { text-align: left; width: 40%; }
+    .client-table th:not(:first-child) { width: 15%; }
+    .client-table td { padding: 12px 4px; font-size: 0.85rem; color: var(--text-main); border-bottom: 1px solid rgba(255, 255, 255, 0.05); vertical-align: middle; }
+    .client-table tr:last-child td { border-bottom: none; }
+    .client-name { font-weight: 700; color: var(--text-main); display: block; line-height: 1.2; }
+    .status-check { color: var(--accent-blue); font-weight: bold; text-align: center; font-size: 1rem; }
+    .status-none { color: rgba(255, 255, 255, 0.05); text-align: center; }
+</style>
+
+<div class="group-card">
+    <div class="group-name"><span class="item-title">各平台一览表</span></div>
+    <div class="client-table-box">
+        <table class="client-table">
+            <thead><tr><th>应用名</th><th>Win</th><th>And</th><th>Mac</th><th>iOS</th></tr></thead>
+            <tbody>
+                <tr><td><span class="client-name">v2rayN</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">Clash Verge</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">FlClash</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">CMFA</span></td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">Clash Mi</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
+                <tr><td><span class="client-name">Karing</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
+                <tr><td><span class="client-name">Clash Party</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">ClashX Meta</span></td><td class="status-none">-</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">NekoBox</span></td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">v2rayNG</span></td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-none">-</td></tr>
+                <tr><td><span class="client-name">Hiddify</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>						
         <div class="group-card">
             <div class="group-name">Windows</div>
             <div class="link-row">
@@ -1688,7 +1722,7 @@
                 </div>
             </div>
             <div class="link-row">
-                <div class="item-header"><span class="item-title">ClashX</span><span class="tag">mihomo团队</span></div>
+                <div class="item-header"><span class="item-title">ClashX.Meta</span><span class="tag">mihomo团队</span></div>
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/MetaCubeX/ClashX.Meta</span></div>
                     <a href="https://github.com/MetaCubeX/ClashX.Meta/releases" class="open-btn" target="_blank">打开链接</a>
@@ -1746,7 +1780,14 @@
                     <div class="url-box"><span class="url-text">apps.apple.com/us/app/id1443988620</span></div>
                     <a href="https://apps.apple.com/us/app/id1443988620" class="open-btn" target="_blank">打开链接</a>
                 </div>
-            </div>			
+            </div>
+            <div class="link-row">
+                <div class="item-header"><span class="item-title">Happ</span><span class="tag">免费</span></div>
+                <div class="action-area">
+                    <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6504287215</span></div>
+                    <a href="https://apps.apple.com/us/app/id6504287215" class="open-btn" target="_blank">打开链接</a>
+                </div>
+            </div> 												
             <div class="link-row">
                 <div class="item-header"><span class="item-title">Clash Mi</span><span class="tag">免费</span></div>
                 <div class="action-area">
@@ -1868,6 +1909,13 @@
                     <a href="https://wiki.metacubex.one/" class="open-btn" target="_blank">打开链接</a>
                 </div>
             </div>
+            <div class="link-row">
+                <div class="item-header"><span class="item-title">Clash Mi</span></div>
+                <div class="action-area">
+                    <div class="url-box"><span class="url-text">clashmi.app/guide/</span></div>
+                    <a href="https://clashmi.app/guide/" class="open-btn" target="_blank">打开链接</a>
+                </div>
+            </div>												
             <div class="link-row">
                 <div class="item-header"><span class="item-title">SingBox</span></div>
                 <div class="action-area">
