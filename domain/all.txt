@@ -4,10 +4,10 @@ cloudflare.dev:443#官方域名 | Docs
 cloudflare.net:443#官方域名 | Business
 pages.dev:443#官方域名 | Pages
 r2.dev:443#官方域名 | R2
-cdnjs.com:443#官方域名 | CDNJS
 static.cloudflareinsights.com:443#官方域名 | Analytics
 cloudflare-dns.com:443#官方域名 | DNS
 cloudflare-ech.com:443#官方域名 | ECH
+cdnjs.com:443#官方域名 | CDNJS
 visa.com:443#企业域名 | VISA
 shopify.com:443#企业域名 | Shopify
 digitalocean.com:443#企业域名 | DigitalOcean
@@ -47,13 +47,13 @@ virtualcommtraining.verizon.com:443#更多选择 | Verizon
 loreal.com:443#更多选择 | 欧莱雅
 cloudflare.182682.xyz:443#更多选择 | WeTest
 bestcf.top:443#更多选择 | VPS789
+ct.877774.xyz:443#更多选择 | 电信QMS
 cmcc.877774.xyz:443#更多选择 | 移动QMS
 cu.877774.xyz:443#更多选择 | 联通QMS
-ct.877774.xyz:443#更多选择 | 电信QMS
+dx.hhhhh.eu.org:443#更多选择 | 电信WuYa
 yd.hhhhh.eu.org:443#更多选择 | 移动WuYa
 lt.hhhhh.eu.org:443#更多选择 | 联通WuYa
-dx.hhhhh.eu.org:443#更多选择 | 电信WuYa
+ct.cloudflare.byoip.top:443#更多选择 | 电信Byoip
 cm.cloudflare.byoip.top:443#更多选择 | 移动Byoip
 cu.cloudflare.byoip.top:443#更多选择 | 联通Byoip
-ct.cloudflare.byoip.top:443#更多选择 | 电信Byoip
 bestcf.030101.xyz:443#▲ 精选域名 | 5-15 | BestCF.pages.dev
