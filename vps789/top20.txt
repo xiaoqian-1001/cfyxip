@@ -1,4 +1,4 @@
-saas.sin.fan:443#▼ 优选域名 TOP20 | 05-17 10:43 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP20 | 05-17 11:13 | YouTube@真香定律
 yg7.ygkkk.dpdns.org:443#yg7.ygkkk.dpdns.org
 cdn.2020111.xyz:443#cdn.2020111.xyz
 cf.v8.longsays.com:443#cf.v8.longsays.com
@@ -6,15 +6,15 @@ fk.hshwk.org:443#fk.hshwk.org
 cloudflare.cnae.top:443#cloudflare.cnae.top
 11.cf.3666888.xyz:443#11.cf.3666888.xyz
 yg11.ygkkk.dpdns.org:443#yg11.ygkkk.dpdns.org
+www.mfyx.cn:443#www.mfyx.cn
 www.swowd.com:443#www.swowd.com
 api.gzcrtw.com:443#api.gzcrtw.com
 cf.553314.xyz:443#cf.553314.xyz
 mskcc.org:443#mskcc.org
-www.mfyx.cn:443#www.mfyx.cn
+cloudflare-ip.mofashi.ltd:443#cloudflare-ip.mofashi.ltd
 www.shopify.com:443#www.shopify.com
 cdn.204910.best:443#cdn.204910.best
 www.fastsoso.cn:443#www.fastsoso.cn
-cf.3666888.xyz:443#cf.3666888.xyz
 cloudflare.idc.rocks:443#cloudflare.idc.rocks
 cdn.cf.3666888.xyz:443#cdn.cf.3666888.xyz
 youxuan.cf.3666888.xyz:443#youxuan.cf.3666888.xyz
