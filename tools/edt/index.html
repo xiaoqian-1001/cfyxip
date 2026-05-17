@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>EdgeTunnel 相关概念一览表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.5;
+            padding: 32px 20px 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .sub {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .search-wrapper {
+            max-width: 500px;
+            margin: 28px auto 36px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 45px 12px 18px;
+            background: #1e293b;
+            border: 1.5px solid #334155;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #f1f5f9;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .search-input::placeholder {
+            color: #64748b;
+        }
+
+        .search-input:focus {
+            border-color: #3b82f6;
+        }
+
+        .clear-btn {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: #94a3b8;
+            cursor: pointer;
+            display: none;
+        }
+
+        .clear-btn:hover {
+            color: #f1f5f9;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 18px;
+        }
+
+        .concept-card {
+            background: #1e293b;
+            border-radius: 18px;
+            padding: 18px 20px;
+            border: 1px solid #334155;
+            transition: all 0.2s;
+        }
+
+        .concept-card:hover {
+            background: #2d3a4f;
+            transform: translateY(-2px);
+        }
+
+        .concept-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: #e2e8f0;
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .meaning-label {
+            font-size: 0.75rem;
+            color: #60a5fa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .meaning-text {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.45;
+            margin-bottom: 14px;
+        }
+
+        .technical-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .technical-text {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.42;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+            background: #1e293b50;
+            border-radius: 24px;
+            border: 1px dashed #334155;
+        }
+
+        .footer-nav {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+        }
+        .nav-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 24px 16px 90px;
+            }
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-title {
+                font-size: 1.2rem;
+            }
+            .nav-btn {
+                padding: 10px 24px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>EDT 相关概念一览表</h1>
+        <!-- <div class="sub">副标题</div> -->
+
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" class="search-input" placeholder="搜索概念名称、关键词" autocomplete="off">
+            <button id="clearBtn" class="clear-btn">✕</button>
+        </div>
+    </header>
+
+    <div id="conceptsContainer"></div>
+    <div id="noResultsMessage" class="no-results" style="display: none;">没有找到相关的概念<br>试试其他关键词或清空搜索</div>
+</div>
+
+<footer class="footer-nav">
+    <a href="https://bestcf.pages.dev/" class="nav-btn" target="_blank">Cloudflare EDT 导航</a>
+</footer>
+
+<script>
+    // ===================== 完整概念数据（按分类穷举，已优化部分表述）=====================
+    const fullConcepts = {
+        "基础网络概念": [
+            { name: "Cloudflare (CF)", 通俗: "一家提供 CDN 和安全防护的互联网公司。可以把它想象成一个覆盖全球的巨大网络保镖。", 专业: "全球性的分布式边缘网络平台，提供 CDN、DDoS 防护、DNS 解析和安全隧道等服务。EdgeTunnel 运行在它的无服务器计算服务 Cloudflare Workers 之上。" },
+            { name: "Cloudflare Workers & Pages", 通俗: "Cloudflare 提供的一项服务，允许你编写一小段 JavaScript 代码，直接运行在全球各地的数据中心里，无需管理自己的服务器。", 专业: "Cloudflare 的无服务器计算平台，基于 Chrome V8 引擎。开发者可以部署代码到 Cloudflare 的边缘网络，在靠近用户的位置执行，实现高性能和低延迟。" },
+            { name: "IP (Internet Protocol)", 通俗: "每台上网设备的门牌号。没有它，互联网上的数据就找不到你。", 专业: "互联网协议地址，用于标识网络中的设备。EdgeTunnel 最终需要连接到一个 IP 地址来转发流量。" },
+            { name: "端口 (Port)", 通俗: "门牌号之后的房门号。一台设备有很多端口，不同服务（如网页、邮件）使用不同的端口。", 专业: "操作系统为网络服务提供的逻辑出入口。HTTPS 服务通常使用 443 端口，HTTP 使用 80 端口。EdgeTunnel 的代理节点和优选 IP 都会指定端口号。" },
+            { name: "CDN (Content Delivery Network)", 通俗: "内容分发网络。把网站的图片、视频等数据提前复制并存储在世界各地的服务器上，让你上网更快。", 专业: "由分布在不同地理位置的服务器群组成的网络。Cloudflare 的 CDN 是其核心服务之一，EdgeTunnel 利用其遍布全球的节点来转发流量。" },
+            { name: "边缘网络 (Edge Network)", 通俗: "离用户最近的网络。就像把快递仓库建在你家楼下，取快递比去市中心快得多。", 专业: "位于网络核心层与用户终端之间的网络。Cloudflare 的 Workers 运行在边缘节点上，可以大幅减少数据传输延迟。" },
+            { name: "隧道 (Tunnel)", 通俗: "一条加密的点对点通道。在拥挤嘈杂的互联网里，给你和对方挖了一条专属的地铁，又快又安全。", 专业: "一种网络协议，通过封装数据包，在公共网络中创建一条安全的、私密的虚拟链路。EdgeTunnel 的核心功能就是在客户端和 Worker 脚本之间建立这种隧道。" },
+            { name: "反向隧道 (Reverse Tunnel)", 通俗: "让位于内网（没有公网IP）的设备也能被外网访问。像一个只能打内线电话的保安，通过外线手机主动联系外面，让外面的人能找到里面的服务。", 专业: "一种隧道架构，客户端（位于内网）主动发起连接到服务端（位于公网），从而允许公网服务访问内网资源。" },
+            { name: "Anycast (泛播)", 通俗: "全球多个服务器共享同一个 IP 地址。你访问这个 IP，网络路由会自动把你带到离你最近的那个服务器。", 专业: "一种网络寻址和路由方法，将同一个 IP 地址分配给多台服务器。Cloudflare 利用 Anycast 技术，将流量自动路由到其全球网络中距离你最近的节点。" },
+            { name: "BGP (Border Gateway Protocol)", 通俗: "互联网的高速公路地图，决定了数据包从一个网络去往另一个网络的最佳路径。", 专业: "边界网关协议，运行在自治系统（AS）之间的核心路由协议。Cloudflare 拥有庞大的 BGP 网络，并通过 BGP Anycast 技术向全球广播其 IP 路由。" },
+            { name: "ASN (Autonomous System Number)", 通俗: "自治系统编号，类似于每个大型网络的身份证号。电信、联通、Cloudflare 都有自己的 ASN。", 专业: "自治系统编号，用于标识一个独立的网络实体。通过 ASN 可以获取该网络广播的所有 IP 段，常用于优选 IP 的大规模扫描。" },
+            { name: "ISP (Internet Service Provider)", 通俗: "互联网服务提供商，也就是电信、联通、移动这些运营商。", 专业: "为用户提供互联网接入服务的商业机构。不同 ISP 的国际线路质量不同，影响了优选 IP 的效果。" },
+            { name: "DNS (Domain Name System)", 通俗: "域名系统。把 google.com 这样的域名转换成 IP 地址的电话簿。", 专业: "域名系统，将人类可读的域名解析为机器可读的 IP 地址。EdgeTunnel 中的 DoH 查询、优选 IP 解析都依赖于 DNS。" },
+            { name: "DoH (DNS over HTTPS)", 通俗: "加密的 DNS 查询。防止别人偷看你访问了什么网站。", 专业: "基于 HTTPS 的 DNS 协议，将 DNS 查询封装在 HTTPS 请求中，防止中间人窃听或篡改 DNS 响应。" },
+            { name: "NAT64", 通俗: "一种让 IPv6 网络访问 IPv4 网络的翻译官技术。", 专业: "网络地址转换技术的一种，允许纯 IPv6 客户端与 IPv4 服务器通信。某些 EdgeTunnel 配置中用作 ProxyIP 的解决方案。" }
+        ],
+        "核心代理概念": [
+            { name: "edgetunnel (EDT)", 通俗: "一个可以部署在 Cloudflare Workers 上的代理脚本。能把你的 Cloudflare 边缘节点变成一个小型的、能代理流量的服务器。", 专业: "开源项目，整合了 VLESS、Trojan 等多种代理协议，并具备订阅生成、WebSocket/gRPC 传输、优选 IP 等高级功能的 Cloudflare Workers 脚本。" },
+            { name: "_worker.js", 通俗: "Cloudflare Workers 的入口文件。整个 edgetunnel 的灵魂，所有功能都写在这个文件里。", 专业: "Cloudflare Workers 的脚本文件。部署到 Cloudflare 上的就是这个文件，包含了处理所有网络请求的逻辑代码。" },
+            { name: "VLESS", 通俗: "一种轻量级的加密传输协议，设计简单，配置基于 UUID。", 专业: "一个无状态的、轻量级的代理协议，V2Ray 项目的一部分。去除了原 VMess 协议中的动态加密部分，是 EdgeTunnel 的主要承载协议之一。" },
+            { name: "Trojan", 通俗: "另一种代理协议，巧妙之处在于把流量伪装成正常的 HTTPS 网站访问，看起来和普通上网一样。", 专业: "一种通过伪装成 HTTPS 流量来绕过网络审查的代理协议。使用 443 端口并需要有效的 TLS 证书，流量特征与普通网页浏览高度相似。EdgeTunnel 也支持此协议。" },
+            { name: "Shadowsocks (SS)", 通俗: "一种经典的、设计非常轻巧的加密代理协议，主要通过 SOCKS5 代理进行加密通信。", 专业: "基于 SOCKS5 的加密代理协议，由 clowdywind 开发。由客户端、服务端及加密方案组成，设计目标是简单、高效、安全。部分 EdgeTunnel 衍生版支持此协议。" },
+            { name: "UUID (Universally Unique Identifier)", 通俗: "一个独一无二的、随机生成的身份证号。用来标识每一个代理节点的用户身份。", 专业: "通用唯一标识符，128 位的数字，通常表示为 32 个十六进制字符的字符串。在 VLESS 和 Trojan 协议中作为密码使用，用于客户端和服务器之间的身份验证。" },
+            { name: "ProxyIP", 通俗: "一个充当二传手的中间代理服务器。当直连目标网站很慢时，让这个中间人帮你取数据，再传给你。", 专业: "在 EdgeTunnel 架构中，当 Cloudflare Worker 无法直接访问目标网站时，配置一个代理 IP（ProxyIP），Worker 将请求发给它，由它去访问目标网站并返回数据。" },
+            { name: "反代池 (ProxyIP Pool)", 通俗: "多个备用 ProxyIP 的集合。如果一个 IP 不行了，自动换另一个。", 专业: "在 EdgeTunnel 中配置的多个 ProxyIP 的集合。当使用其中一个失败时，可以自动轮换或随机选择另一个可用 IP。" },
+            { name: "链式代理 (Chain Proxy)", 通俗: "代理的代理，请求像链条一样经过一个又一个代理服务器。", 专业: "一种代理架构，网络流量依次经过多个代理服务器。在 EdgeTunnel 中可配置 SOCKS5、HTTP、HTTPS、TURN、SSTP 代理作为上游，形成代理链。" },
+            { name: "入口 (Inbound)", 通俗: "代理服务器接收客户端连接的那一端。", 专业: "代理软件中配置的、用于接收来自客户端流量的端口和协议设置。EdgeTunnel 作为服务端，其 Worker 地址和路径就是入口。" },
+            { name: "出口 (Outbound)", 通俗: "代理服务器连接目标网站的那一端。", 专业: "代理软件中配置的、用于将流量转发到目标网站的设置。EdgeTunnel 中的直连、ProxyIP、链式代理等都属于出口配置。" },
+            { name: "回落 (Fallback)", 通俗: "当代理服务器无法识别一个请求时，把它丢回给正常的网站服务器处理。", 专业: "一种代理服务器的流量处理机制。当入站流量不是合法的代理协议请求时，将其转发至指定的 Web 服务器，返回正常网页内容。" },
+            { name: "回落网站 (Fallback Site)", 通俗: "伪装时用来充当门面的正常网页。", 专业: "在代理服务器配置中指定的、用于处理非代理请求的正常网站地址。访问者直接访问 Worker 域名时会看到这个伪装网站。" },
+            { name: "Socks5", 通俗: "一种基础的代理协议，不加密，但很多工具都支持。", 专业: "SOCKS 协议的第 5 个版本，一种网络代理协议，在客户端和目标服务器之间建立透明通道，不关心传输内容，但不提供加密。" },
+            { name: "HTTP/HTTPS 代理", 通俗: "专门处理 HTTP 和 HTTPS 流量的代理，浏览网页最常用。", 专业: "基于 HTTP 协议的代理服务器，可以理解和转发 HTTP 请求。HTTPS 代理则在其中增加了 TLS 加密层。" },
+            { name: "TURN", 通俗: "一种中继协议，专门解决 NAT 穿透问题，适用于音视频通话场景。", 专业: "Traversal Using Relays around NAT，一种通过中继服务器转发数据来解决 NAT 穿透问题的协议。EdgeTunnel 支持将其作为链式代理的上游。" },
+            { name: "SSTP", 通俗: "微软开发的 VPN 协议，把 PPP 帧封装在 HTTPS 里，伪装得很好。", 专业: "Secure Socket Tunneling Protocol，一种使用 HTTPS 协议封装的 VPN 技术，通常用于 Windows 的远程访问 VPN。EdgeTunnel 支持作为链式代理的上游。" }
+        ],
+        "优选加速概念": [
+            { name: "优选 IP (Preferred IP)", 通俗: "一个离你更近、速度更快的 Cloudflare IP 地址。不是所有 IP 都一样快，找对 IP 能大幅提升速度。", 专业: "Cloudflare 拥有庞大的 IP 地址池。通过测速工具找到对于本地网络延迟最低、下载速度最快的 IP 地址，用于代理节点配置中以获得最佳访问体验。" },
+            { name: "优选 IP 端口扫描", 通俗: "除了找 IP 地址，还要找到它上面哪个端口是开放的、可以用的。", 专业: "在确定优选 IP 后，扫描其常用端口（如 80、443、2052、2082 等）的连通性，找出可用的端口用于代理连接。" },
+            { name: "测速 (Speed Test)", 通俗: "测量网络的好坏，看看延迟高不高、下载快不快。", 专业: "一种网络诊断方法，通过发送 ICMP 请求（Ping）测量延迟，或通过 HTTP 下载文件测量带宽和下载速度。优选 IP 过程中测速是筛选 IP 的关键步骤。" },
+            { name: "延迟 (Latency)", 通俗: "从你发出一个数据包到对方响应所需的时间。通常以毫秒（ms）计算，数值越小反应越快。", 专业: "数据包从源地址到目标地址并返回所经历的时间。低延迟对于实时通信（如游戏、视频通话）至关重要。" },
+            { name: "丢包 (Packet Loss)", 通俗: "数据包在半路丢了，没送到目的地。就像寄信寄丢了。", 专业: "数据包在传输过程中丢失的比例。高丢包率会导致连接不稳定、速度慢、重传增多。" },
+            { name: "抖动 (Jitter)", 通俗: "延迟的变化幅度。一会儿快一会儿慢，打游戏和视频通话会感觉很卡。", 专业: "延迟的变化程度，通常指相邻数据包到达时间间隔的差异。高抖动对实时音视频传输影响较大。" },
+            { name: "带宽 (Bandwidth)", 通俗: "网络管道的大小，决定了单位时间内能传输多少数据。水管越粗，流水越快。", 专业: "网络链路在单位时间内能传输的最大数据量，通常以 Mbps（兆比特每秒）为单位。测速中的下载速度就是测试实际可用带宽。" },
+            { name: "CIDR (Classless Inter-Domain Routing)", 通俗: "一种表示 IP 地址段的方法。比如 192.168.1.0/24 就表示 192.168.1.1 到 192.168.1.254 这一整个小区。", 专业: "无类别域间路由，一种用于聚合 IP 地址和路由的方法。使用斜杠记法（如 /24）指定网络前缀的位数。优选 IP 中通过 Cloudflare 的 CIDR 列表扫描整个 IP 段。" },
+            { name: "IP 段 (IP Range)", 通俗: "一段连续的 IP 地址。就好比某条街道上的连续门牌号。", 专业: "由起始 IP 和结束 IP 或 CIDR 前缀定义的一组连续的 IP 地址。Cloudflare 会广播多个 IP 段，优选 IP 就是从中筛选。" },
+            { name: "纯净度 (IP Purity)", 通俗: "这个 IP 有没有污点。比如是否因为分享的人太多而被某些网站拉黑，或者被运营商限制。", 专业: "指 IP 地址未被滥用、未被列入黑名单、且未被 ISP 特殊限制（如 QoS 限速）的程度。纯净的优选 IP 能获得更稳定、无干扰的连接。" },
+            { name: "路由 (Routing)", 通俗: "数据包在互联网上走的路。就像导航，从北京到上海有很多条路，有的路堵，有的路远。", 专业: "网络层根据数据包的目标 IP 地址决定其下一跳路径的过程。电信、联通、移动等不同运营商有各自的国际线路，路由的好坏直接影响访问速度和稳定性。" },
+            { name: "国际出口 (International Gateway)", 通俗: "国内网络连接国外互联网的必经之路。就像机场的出境通道。", 专业: "从中国境内连接到国际互联网的物理出口。不同运营商（电信、联通、移动）有不同的国际出口，其带宽和路由策略各不相同。" },
+            { name: "CN2 (ChinaNet Next Carrying Network)", 通俗: "中国电信的高端国际线路，号称更快更稳，当然也更贵。", 专业: "中国电信的下一代承载网络，是其优质国际线路的品牌名。CN2 GIA（Global Internet Access）是最高等级的产品。" },
+            { name: "CN2 GIA", 通俗: "CN2 里最好的那一种，国际和国内段都走 CN2 线路，双向加速。", 专业: "CN2 产品中的最高等级，提供从用户端到国际互联网全程 CN2 线路，具有低延迟、高稳定性的特点。" },
+            { name: "QoS (Quality of Service)", 通俗: "网络运营商对数据流量的区别对待。比如下电影不卡但打游戏卡，运营商为了保障大多数人，会对某些类型的数据限速。", 专业: "服务质量，一种网络流量管理机制。ISP 可以识别并限制或优化特定类型的流量。某些 IP 可能因为触发 QoS 策略而导致代理速度不佳。" },
+            { name: "阻断 (Blocking)", 通俗: "运营商或防火墙主动切断你对某个 IP 的访问。就像路口被封了。", 专业: "网络审查的一种形式，通过干扰或丢弃数据包使特定 IP 或端口无法访问。优选 IP 也可能因为被大量用于代理而被阻断。" },
+            { name: "ICMP (Internet Control Message Protocol)", 通俗: "互联网控制消息协议。Ping 命令用的就是这个，用来测试网络通不通。", 专业: "用于在 IP 网络中传递错误报告和诊断信息的协议。Ping 工具通过发送 ICMP Echo 请求并接收回复来测量延迟。" },
+            { name: "MTR (My TraceRoute)", 通俗: "结合了 Ping 和 Traceroute 的工具，可以看到每一跳的延迟和丢包情况。", 专业: "网络诊断工具，结合了 traceroute 和 ping 的功能，持续向路径上的每一跳发送探测包，统计丢包率和延迟。" },
+            { name: "运营商 (Carrier/ISP)", 通俗: "中国电信、中国联通、中国移动三大网络服务提供商。", 专业: "提供互联网接入服务的商业机构。在中国，主要的运营商是中国电信（China Telecom/CT）、中国联通（China Unicom/CU）和中国移动（China Mobile/CMCC）。" },
+            { name: "三网 (Three Networks)", 通俗: "电信、联通、移动三大国内运营商网络的统称。", 专业: "中国电信、中国联通、中国移动三大骨干网的合称。由于互联互通存在瓶颈，不同运营商的用户可能需要针对自己的运营商类型进行优选。" }
+        ],
+        "传输协议概念": [
+            { name: "WebSocket (WS)", 通俗: "一种能在浏览器和服务器之间建立持久连接的通信技术。双方随时可以互发消息，像一条永不挂断的电话线。", 专业: "一种在单个 TCP 连接上提供全双工通信的协议。EdgeTunnel 支持 WS 作为主要的传输载体，用于在客户端和 Worker 之间建立长连接转发流量。" },
+            { name: "WSS (WebSocket Secure)", 通俗: "加密版的 WebSocket，数据通过 TLS 加密传输。", 专业: "WebSocket over TLS/SSL，是 WebSocket 的加密版本，使用 wss:// 协议头，数据传输更安全。" },
+            { name: "gRPC", 通俗: "一种高性能的远程调用协议，特别适合后端服务之间的通信。可以把它想象成一个比普通 HTTP 更高效的快递员。", 专业: "开源的高性能远程过程调用（RPC）框架。EdgeTunnel 利用 gRPC 流作为传输模式，处理代理流量时可能比 WebSocket 更高效。" },
+            { name: "gRPC Gun", 通俗: "gRPC 的一种工作模式，全双工流。", 专业: "gRPC 的一种流模式，客户端和服务端可以同时发送多条消息，实现真正的全双工通信。" },
+            { name: "gRPC Multi", 通俗: "gRPC 的另一种工作模式，多路复用。", 专业: "gRPC 的一种配置模式，允许多个请求或流复用同一个底层 HTTP/2 连接。" },
+            { name: "XHTTP", 通俗: "EdgeTunnel 支持的一种比较新的、更灵活的传输方式。", 专业: "一种基于 HTTP 的传输协议，主要用于实现 Xray 核心中的协议。EdgeTunnel 通过处理特定请求头来支持 XHTTP 传输模式。" },
+            { name: "TCP (Transmission Control Protocol)", 通俗: "一种可靠的、面向连接的传输协议。相当于打电话模式，确保对方能一字不差地听到你说的话。", 专业: "传输控制协议，互联网的核心协议之一，提供面向连接、可靠的、基于字节流的传输服务。大部分网络应用（HTTP、HTTPS、SSH）都基于 TCP。" },
+            { name: "UDP (User Datagram Protocol)", 通俗: "一种不可靠的、无连接的传输协议。相当于寄信模式，发出去就不管了，不管对方收没收到，速度很快。", 专业: "用户数据报协议，提供无连接的、不可靠的传输服务，不保证数据包的顺序和完整性，但传输效率更高。常用于视频通话、在线游戏、DNS 查询。" },
+            { name: "TLS (Transport Layer Security)", 通俗: "HTTPS 里那个 S，负责给传输的数据加密。保护你在网上冲浪时密码、信息不被别人偷看。", 专业: "传输层安全协议，前身是 SSL。在 TCP 之上为上层应用提供加密通道。EdgeTunnel 的优选 IP 地址通常对应开启 TLS 的 443 端口。" },
+            { name: "TLS 指纹 (TLS Fingerprint)", 通俗: "TLS 握手时客户端暴露出来的特征组合，浏览器和代理工具的特征不一样。", 专业: "TLS 握手过程中客户端发送的加密套件、扩展、版本等参数的组合。服务器可以用它来识别客户端类型（真实浏览器还是代理工具）。" },
+            { name: "ALPN (Application-Layer Protocol Negotiation)", 通俗: "TLS 握手时顺便商量好要用什么应用层协议，比如 h2（HTTP/2）还是 http/1.1。", 专业: "应用层协议协商，TLS 扩展，允许客户端在握手中告知服务器其支持的应用层协议列表，服务器选择其中一个。" },
+            { name: "0RTT (Zero Round Trip Time)", 通俗: "零往返时间，TLS 1.3 的特性。如果你之前连接过这台服务器并缓存了会话票据，再次连接时可以跳过握手，直接发数据。", 专业: "TLS 1.3 引入的机制，允许客户端在第一次往返中就发送应用数据，显著减少连接建立的延迟。EdgeTunnel 支持启用此特性。" },
+            { name: "会话票据 (Session Ticket)", 通俗: "TLS 服务器给你的通行证。凭此证下次再来时可以省去繁琐的握手流程。", 专业: "TLS 会话恢复机制的一种。服务器在第一次完整握手后向客户端分发加密的票据，后续连接可用其恢复会话，实现 0RTT。" },
+            { name: "Fragment (碎片化)", 通俗: "把数据包切成小块，让审查系统看不出来这是一个完整的代理请求。", 专业: "一种流量整形技术，将 TLS Client Hello 等关键数据包拆分成多个小包发送，干扰基于数据包大小和模式的 DPI 系统。" },
+            { name: "ECH (Encrypted Client Hello)", 通俗: "一个更安全的 TLS 扩展，把你访问的网站域名（SNI）也加密起来，让审查者不知道你在访问哪个网站。", 专业: "加密客户端问候，TLS 协议的扩展。将 Client Hello 中的 SNI 字段加密，防止中间人窥探用户试图访问的网站域名。" },
+            { name: "SNI (Server Name Indication)", 通俗: "服务器名称指示。访问网站时告诉服务器你要访问这个服务器上的哪个网站。", 专业: "TLS 协议的扩展，允许客户端在 TLS 握手早期告知服务器它要连接的主机名。代理工具常通过修改或伪造 SNI 来进行伪装。" },
+            { name: "HTTP/2", 通俗: "新一代 HTTP 协议，支持多路复用、服务器推送等特性，比 HTTP/1.1 更快。", 专业: "HTTP 的第二版，基于二进制帧传输，支持同一连接并发处理多个请求，头部压缩，延迟更低。gRPC 和某些传输模式依赖 HTTP/2。" },
+            { name: "HTTP/3", 通俗: "最新一代 HTTP 协议，基于 UDP 而不是 TCP，连接建立更快，丢包重传更高效。", 专业: "HTTP 的第三版，使用 QUIC 协议（基于 UDP）作为传输层，解决了 TCP 的队头阻塞问题，连接建立更快。" },
+            { name: "Mux (Multiplexing)", 通俗: "多路复用，一个连接上同时跑多个请求，互不干扰。", 专业: "在同一个传输层连接上同时处理多个逻辑流的技术。Shadowsocks 插件和 gRPC 都支持多路复用。" },
+            { name: "UoT (UDP over TCP)", 通俗: "把 UDP 数据包装进 TCP 连接里传输。", 专业: "一种封装技术，将 UDP 数据报封装在 TCP 流中发送。某些代理场景下用于传输 DNS 请求。" },
+            { name: "Mss (Maximum Segment Size)", 通俗: "最大分段大小，一个数据包最多能装多少数据。", 专业: "TCP 连接中单个数据段能携带的最大数据字节数。MTU 减去 IP 头和 TCP 头得到 MSS。" }
+        ],
+        "管理概念": [
+            { name: "订阅 (Subscription)", 通俗: "一个包含了所有代理节点信息的链接。把这个链接导入代理软件，软件就会自动加载所有节点信息。", 专业: "用于自动更新代理软件配置的机制。服务端提供一个 URL，客户端定期从这个 URL 拉取最新的节点列表和配置信息。" },
+            { name: "订阅 Token", 通俗: "订阅链接里的密码，防止别人乱用你的订阅。", 专业: "订阅链接中用于身份验证的参数。EdgeTunnel 通过 Token 验证请求是否合法，防止订阅地址被未经授权的用户访问。" },
+            { name: "订阅转换 (Subscription Conversion)", 通俗: "把一种格式的订阅链接转换成另一种代理软件能识别的格式。比如把 edgetunnel 生成的链接转成 Clash 或 sing-box 的配置文件。", 专业: "中间件服务，接收一种格式的订阅数据（如 Base64），解析并重新组装成其他软件（如 Clash、Surge、Quantumult X）所需的特定格式。" },
+            { name: "订阅后端 (Subconverter)", 通俗: "一个通用的订阅转换服务，支持几十种客户端格式。", 专业: "开源订阅转换项目，提供统一的 API 接口，能将多种格式的订阅输入转换为指定客户端所需的格式。EdgeTunnel 可配置使用 Subconverter。" },
+            { name: "优选订阅生成器", 通俗: "一个自动生成优选 IP 订阅链接的服务。它会帮你测好最快的 IP，打包成订阅给你用。", 专业: "提供优选 IP 订阅服务的后端。EdgeTunnel 可以配置使用外部优选订阅生成器，或自己作为生成器为其他用户提供服务。" },
+            { name: "优选 API", 通俗: "提供优选 IP 数据的接口。测速工具或脚本通过调用这个 API 获取最新的优选 IP 列表。", 专业: "返回优选 IP 列表的 HTTP API 接口。EdgeTunnel 可以消费这些 API 的数据，也可以自己提供类似接口。" },
+            { name: "KV (Key-Value Storage)", 通俗: "Cloudflare Workers 的小硬盘。用来存储配置信息、日志等少量数据。", 专业: "键值对存储数据库。EdgeTunnel 利用 Cloudflare KV 来持久化存储配置文件（config.json）、优选 IP 列表（ADD.txt）和日志文件（log.json）。" },
+            { name: "环境变量 (Environment Variable)", 通俗: "部署 Worker 时可以设置的配置参数，不用修改代码就能改变脚本行为。", 专业: "在 Cloudflare Workers 中配置的键值对，可以在脚本中通过 env 对象读取。常用环境变量包括 ADMIN、UUID、PROXYIP、HOST 等。" },
+            { name: "伪装 (Disguise/Camouflage)", 通俗: "为了让代理流量看起来像正常的网页访问，当有人直接访问 Worker 域名时返回一个正常的伪装网页。", 专业: "一种反侦察技术。EdgeTunnel 配置当访问路径不符合代理请求时，返回一个正常的网站页面或 Cloudflare 错误页，以隐藏代理服务的存在。" },
+            { name: "Log (日志)", 通俗: "记录谁在什么时候访问了什么，方便排查问题和统计流量。", 专业: "系统运行过程中产生的事件记录。EdgeTunnel 支持将访问日志存储到 KV，并可通过管理页面或 Telegram 查看。" },
+            { name: "快照 (Snapshot)", 通俗: "配置文件的一个备份版本。出问题了可以快速恢复到之前的配置。", 专业: "配置文件或状态的某个时间点的完整副本。EdgeTunnel 的管理面板支持保存配置快照以便回滚。" },
+            { name: "回滚 (Rollback)", 通俗: "把配置恢复到之前保存的某个版本。改坏了可以撤销。", 专业: "将系统配置或状态恢复到之前保存的某个快照版本的操作。用于配置错误后的快速恢复。" },
+            { name: "健康检查 (Health Check)", 通俗: "定期检查代理节点是否还活着。如果死了就通知你或自动切到备用节点。", 专业: "系统定期对服务节点进行连通性测试的机制。EdgeTunnel 中可用于检测 ProxyIP 或上游代理的可用性。" },
+            { name: "Telegram 通知 (TG Bot)", 通俗: "通过 Telegram 机器人发消息通知。比如有人订阅了就通知你。", 专业: "EdgeTunnel 集成的通知功能，通过配置 BotToken 和 ChatID，可以在发生订阅、配置变更等事件时通过 Telegram 机器人推送通知。" },
+            { name: "管理面板 (Admin Panel)", 通俗: "一个网页界面，可以修改节点配置、查看日志、优选 IP，不用改代码。", 专业: "EdgeTunnel 集成的 Web 管理界面，通过 /admin 路径访问，提供配置编辑、优选 IP 管理、CF 用量查询等功能。" },
+            { name: "校验和 (Checksum)", 通俗: "文件的数字指纹，用来验证文件下载是否完整、有没有损坏。", 专业: "通过算法（如 SHA-1）对文件内容计算得出的固定长度字符串。用它可以验证文件在传输过程中是否被篡改或损坏。" },
+            { name: "Worker 版本号", 通俗: "脚本的版本标记，用来区分当前用的是哪个版本的代码。", 专业: "在 _worker.js 文件开头的 Version 变量，记录该脚本的发布时间或版本号，用于同步更新时判断是否有新版本。" },
+            { name: "上游同步", 通俗: "自动从原作者仓库拉取最新代码，保持自己的脚本不落后。", 专业: "GitHub Actions 工作流的一种模式，定期检查上游仓库的变化，发现有更新则自动下载并提交到自己的仓库。" },
+            { name: "Workers Date Card", 通俗: "记录各个 Worker 脚本最后更新日期的卡片文件。", 专业: "GitHub Actions 工作流中生成的文件，记录每个 _worker.js 文件的最后更新时间，用于跟踪上游仓库的变化。" },
+            { name: "SHA (Secure Hash Algorithm)", 通俗: "安全哈希算法，把任意长度的数据变成固定长度的指纹。", 专业: "加密哈希算法，SHA-1 输出 160 位，SHA-256 输出 256 位。常用于校验文件完整性和 Git 对象标识。" },
+            { name: "Base64", 通俗: "一种编码方式，把二进制数据变成纯文本。订阅内容常用这种方式编码。", 专业: "一种基于 64 个可打印字符表示二进制数据的方法。订阅链接的原始内容常先进行 Base64 编码再传输。" },
+            { name: "GitHub Actions", 通俗: "GitHub 提供的自动化 CI/CD 服务。定时任务、自动更新脚本都可以跑在上面。", 专业: "GitHub 的持续集成和持续部署平台，允许在代码仓库中配置自动化工作流。常用于定时拉取上游更新、自动混淆脚本等。" },
+            { name: "Cron", 通俗: "Linux 系统里的定时任务。比如每天早上 9 点半自动执行某个脚本。", 专业: "类 Unix 系统中的时间调度工具，通过 cron 表达式定义任务执行时间。GitHub Actions 中也支持 cron 触发工作流。" }
+        ],
+        "安全概念": [
+            { name: "DPI (Deep Packet Inspection)", 通俗: "深度包检测。防火墙通过检查数据包内容来判断你在干什么，是上网看视频还是在用代理。", 专业: "一种网络数据包过滤技术，通过检查数据包的有效载荷和头部信息来识别应用层协议类型和内容。" },
+            { name: "QoS 限速 (QoS Throttling)", 通俗: "运营商发现你在用代理，故意给你降速。", 专业: "ISP 通过流量识别技术，对检测到的代理或 VPN 流量进行带宽限制或优先级降低的操作。" },
+            { name: "黑名单 (Blacklist)", 通俗: "一个记录坏人的名单。某些 IP 因为滥用被列入黑名单，访问受限。", 专业: "一个包含被禁止或被限制的 IP 地址、域名或用户的列表。优选 IP 的纯净度与是否在黑名单中密切相关。" },
+            { name: "SNI 阻断 (SNI Blocking)", 通俗: "防火墙通过检查 SNI 字段判断你访问的域名，如果发现是敏感网站就切断连接。", 专业: "一种审查手段，通过检查 TLS 握手过程中的 SNI 字段来识别用户访问的域名，并对匹配黑名单的域名进行连接重置或干扰。" },
+            { name: "防火墙 (Firewall)", 通俗: "网络边界上的安检门，按照规则允许或阻止数据包通过。", 专业: "一种网络安全系统，基于预设的规则监控和控制进出网络的流量。GFW 本质上是一个大规模的分布式防火墙系统。" },
+            { name: "阻断原因分析", 通俗: "判断 IP 是被墙了还是本身就不通，或者是被限速了。", 专业: "诊断 IP 连接问题的过程，区分是 TCP 阻断、ICMP 阻断、TLS 握手失败还是 QoS 限速，以便针对性解决。" },
+            { name: "证书固定 (Certificate Pinning)", 通俗: "客户端强制要求服务器必须使用某个特定证书，防止中间人攻击。", 专业: "一种安全机制，客户端将服务器的证书或公钥硬编码在应用中，只信任这个特定的证书，防止伪造证书的中间人攻击。" },
+            { name: "反向代理 (Reverse Proxy)", 通俗: "代理服务器接收客户端请求，然后转发给内网的真实服务器。CDN 就是一种反向代理。", 专业: "位于服务器侧，代表服务器接受客户端请求并将请求转发给内部服务器的代理服务。用户感知不到其存在。" },
+            { name: "中间人攻击 (MITM Attack)", 通俗: "攻击者偷偷站在你和服务器中间，偷听甚至篡改你们的通信内容。", 专业: "Man-in-the-Middle Attack，攻击者在通信双方之间建立独立连接，并控制整个会话。TLS 加密就是为了防止这种攻击。" }
+        ]
+    };
+
+    const searchInput = document.getElementById('searchInput');
+    const clearBtn = document.getElementById('clearBtn');
+    const container = document.getElementById('conceptsContainer');
+    const noResultsDiv = document.getElementById('noResultsMessage');
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+
+    function render(filterText = '') {
+        const keyword = filterText.trim().toLowerCase();
+        let hasAny = false;
+        let html = '';
+
+        for (const [category, items] of Object.entries(fullConcepts)) {
+            let filteredItems = items;
+            if (keyword) {
+                filteredItems = items.filter(item => 
+                    item.name.toLowerCase().includes(keyword) ||
+                    item.通俗.toLowerCase().includes(keyword) ||
+                    item.专业.toLowerCase().includes(keyword)
+                );
+            }
+
+            if (filteredItems.length === 0) continue;
+            hasAny = true;
+
+            html += `<div class="category-section">`;
+            html += `<div class="category-title">${escapeHtml(category)}</div>`;
+            html += `<div class="concept-grid">`;
+
+            for (const item of filteredItems) {
+                html += `
+                    <div class="concept-card">
+                        <div class="concept-name">${escapeHtml(item.name)}</div>
+                        <div class="meaning-label">通俗解释</div>
+                        <div class="meaning-text">${escapeHtml(item.通俗)}</div>
+                        <div class="technical-label">专业说明</div>
+                        <div class="technical-text">${escapeHtml(item.专业)}</div>
+                    </div>
+                `;
+            }
+            html += `</div></div>`;
+        }
+
+        if (!hasAny) {
+            container.innerHTML = '';
+            noResultsDiv.style.display = 'block';
+            return;
+        }
+
+        container.innerHTML = html;
+        noResultsDiv.style.display = 'none';
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        clearBtn.style.display = val ? 'block' : 'none';
+        render(val);
+    });
+
+    clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        render('');
+        searchInput.focus();
+    });
+
+    render();
+</script>
+</body>
+</html>
