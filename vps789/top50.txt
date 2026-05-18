@@ -1,8 +1,8 @@
-saas.sin.fan:443#▼ 优选域名 TOP50 | 05-19 03:42 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP50 | 05-19 04:12 | YouTube@真香定律
 yg11.ygkkk.dpdns.org:443#yg11.ygkkk.dpdns.org
 avido.cf.3666888.xyz:443#avido.cf.3666888.xyz
-cloudflare-ip.mofashi.ltd:443#cloudflare-ip.mofashi.ltd
 markmonitor.com:443#markmonitor.com
+cloudflare-ip.mofashi.ltd:443#cloudflare-ip.mofashi.ltd
 adnjv.cf.3666888.xyz:443#adnjv.cf.3666888.xyz
 bestcfv4.030101.xyz:443#bestcfv4.030101.xyz
 www.fastsoso.cn:443#www.fastsoso.cn
@@ -39,10 +39,10 @@ cf.553314.xyz:443#cf.553314.xyz
 test2.509666.xyz:443#test2.509666.xyz
 cfip-ct.stoeaves.us.ci:443#cfip-ct.stoeaves.us.ci
 cf.3666888.xyz:443#cf.3666888.xyz
+nexusmods.com:443#nexusmods.com
 freeyx.cloudflare88.eu.org:443#freeyx.cloudflare88.eu.org
 cu.877774.xyz:443#cu.877774.xyz
 cfsaas.080112.xyz:443#cfsaas.080112.xyz
-nexusmods.com:443#nexusmods.com
 dnew.cc:443#dnew.cc
 www.mc.js.cool:443#www.mc.js.cool
 www.jimdo.com:443#www.jimdo.com
