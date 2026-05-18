@@ -1,9 +1,9 @@
 saas.sin.fan:443#▼ 亚洲域名 | 优选网BestCF.pages.dev
 polestar.com:443#中国极星汽车
 deepin.org:443#中国深度系统
+ubuntu.com.cn:443#中国乌班图
 www.nestle.com.cn:443#中国雀巢
 ir.yuntongxun.com:443#中国容联
-myporscheclub.com:443#中国保时捷Club
 jebsen.com:443#中国香港捷成
 www.aeon.com.hk:443#中国香港永旺
 tomleemusic.com.hk:443#中国香港通利
