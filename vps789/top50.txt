@@ -1,4 +1,4 @@
-saas.sin.fan:443#▼ 优选域名 TOP50 | 05-21 05:43 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP50 | 05-21 06:13 | YouTube@真香定律
 cdn.cf.3666888.xyz:443#cdn.cf.3666888.xyz
 test.509666.xyz:443#test.509666.xyz
 china-unicom.cname.cloudflare.468123.xyz:443#china-unicom.cname.cloudflare.468123.xyz
@@ -11,7 +11,6 @@ hfqek.cf.3666888.xyz:443#hfqek.cf.3666888.xyz
 freeyx.cloudflare88.eu.org:443#freeyx.cloudflare88.eu.org
 5.cf.3666888.xyz:443#5.cf.3666888.xyz
 visa.com.tw:443#visa.com.tw
-yg11.ygkkk.dpdns.org:443#yg11.ygkkk.dpdns.org
 investor.apple.com:443#investor.apple.com
 d.lma.de5.net:443#d.lma.de5.net
 zeas.top:443#zeas.top
@@ -31,17 +30,18 @@ athome.com:443#athome.com
 cfvip.cf.3666888.xyz:443#cfvip.cf.3666888.xyz
 qocu.cf.3666888.xyz:443#qocu.cf.3666888.xyz
 yg7.ygkkk.dpdns.org:443#yg7.ygkkk.dpdns.org
+yg11.ygkkk.dpdns.org:443#yg11.ygkkk.dpdns.org
 cdn.204910.best:443#cdn.204910.best
 6.cf.3666888.xyz:443#6.cf.3666888.xyz
 www.bangbenjiaju.com:443#www.bangbenjiaju.com
 www.visa.com.tw:443#www.visa.com.tw
 openai.com:443#openai.com
 saas.sin.fan:443#saas.sin.fan
-ddk.cfyx.20237737.xyz:443#ddk.cfyx.20237737.xyz
 www.sage.com:443#www.sage.com
 a.lma.de5.net:443#a.lma.de5.net
 youxuan.cf.3666888.xyz:443#youxuan.cf.3666888.xyz
 sanwang.cf.3666888.xyz:443#sanwang.cf.3666888.xyz
+4.cf.3666888.xyz:443#4.cf.3666888.xyz
 cf-ip-node.vov.moe:443#cf-ip-node.vov.moe
 eii.at:443#eii.at
 y508.com:443#y508.com
