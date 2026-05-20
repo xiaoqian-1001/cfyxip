@@ -1,9 +1,6 @@
 saas.sin.fan:443#▼ EDT导航精选域名 | 优选网BestCF.pages.dev
 162.159.198.1:443#官方域名 | ZeroTrust
-162.159.198.1:8443#官方域名 | ZeroTrust
-162.159.46.2:443#官方域名 | ZeroTrust
 162.159.197.1:443#官方域名 | Gateway
-162.159.197.1:8443#官方域名 | Gateway
 gateway.cloudflareaccess.com:443#官方域名 | Endpoint
 cloudflare-eth.com:443#官方域名 | ETH
 cloudflare.dev:443#官方域名 | Docs
@@ -11,15 +8,19 @@ cloudflare.net:443#官方域名 | Business
 pages.dev:443#官方域名 | Pages
 r2.dev:443#官方域名 | R2
 static.cloudflareinsights.com:443#官方域名 | Analytics
-cloudflare-dns.com:443#官方域名 | DNS
 cloudflare-ech.com:443#官方域名 | ECH
 cdnjs.com:443#官方域名 | CDNJS
-visa.com:443#企业域名 | VISA
+162.159.198.1:8443#官方域名 | ZeroTrust
+162.159.46.2:443#官方域名 | ZeroTrust
+162.159.197.1:8443#官方域名 | Gateway
 shopify.com:443#企业域名 | Shopify
+visa.com:443#企业域名 | VISA
 digitalocean.com:443#企业域名 | DigitalOcean
 hongkongairport.com:443#企业域名 | 香港AirPort
 store.ubi.com:443#企业域名 | 育碧商城
 serviceshub.samsclub.com:443#企业域名 | 山姆Club
+www.nestle.com:443#更多选择 | 雀巢咖啡
+www.allianz.com:443#更多选择 | 安联集团
 glassdoor.com:443#企业域名 | Glassdoor
 udemy.com:443#企业域名 | Udemy
 www.visa.cn:443#更多选择 | VISA中国
@@ -27,8 +28,6 @@ www.visa.com.hk:443#更多选择 | VISA香港
 usa.visa.com:443#更多选择 | VISA美国
 www.wto.org:443#更多选择 | WTO世贸
 w3.org:443#更多选择 | W3C万维
-www.allianz.com:443#更多选择 | 安联保险
-www.nestle.com:443#更多选择 | 雀巢咖啡
 bluehost.com:443#更多选择 | BlueHost
 www.sage.com:443#更多选择 | Sage
 www.speedtest.net:443#更多选择 | Ookla
