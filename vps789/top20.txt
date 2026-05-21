@@ -1,11 +1,10 @@
-saas.sin.fan:443#▼ 优选域名 TOP20 | 05-21 11:13 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP20 | 05-21 11:43 | YouTube@真香定律
 cdn.cf.3666888.xyz:443#cdn.cf.3666888.xyz
 uac.cf.3666888.xyz:443#uac.cf.3666888.xyz
+sg.cf.3666888.xyz:443#sg.cf.3666888.xyz
 hfqek.cf.3666888.xyz:443#hfqek.cf.3666888.xyz
-5.cf.3666888.xyz:443#5.cf.3666888.xyz
 china-unicom.cname.cloudflare.468123.xyz:443#china-unicom.cname.cloudflare.468123.xyz
 markmonitor.com:443#markmonitor.com
-sg.cf.3666888.xyz:443#sg.cf.3666888.xyz
 my.dnshe.com:443#my.dnshe.com
 test.509666.xyz:443#test.509666.xyz
 store.ubi.com:443#store.ubi.com
@@ -15,6 +14,7 @@ zeas.top:443#zeas.top
 vps.cheng2001.top:443#vps.cheng2001.top
 www.visa.com.hk:443#www.visa.com.hk
 mogas.com:443#mogas.com
+sanwang.cf.3666888.xyz:443#sanwang.cf.3666888.xyz
 jp.cf.3666888.xyz:443#jp.cf.3666888.xyz
 cf.cf.3666888.xyz:443#cf.cf.3666888.xyz
 cfvip.cf.3666888.xyz:443#cfvip.cf.3666888.xyz
