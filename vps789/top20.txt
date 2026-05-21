@@ -1,4 +1,4 @@
-saas.sin.fan:443#▼ 优选域名 TOP20 | 05-21 09:13 | YouTube@真香定律
+saas.sin.fan:443#▼ 优选域名 TOP20 | 05-21 09:43 | YouTube@真香定律
 cdn.cf.3666888.xyz:443#cdn.cf.3666888.xyz
 uac.cf.3666888.xyz:443#uac.cf.3666888.xyz
 hfqek.cf.3666888.xyz:443#hfqek.cf.3666888.xyz
@@ -11,7 +11,6 @@ cloudflare.rainyfall.com:443#cloudflare.rainyfall.com
 5.cf.3666888.xyz:443#5.cf.3666888.xyz
 my.dnshe.com:443#my.dnshe.com
 investor.apple.com:443#investor.apple.com
-d.lma.de5.net:443#d.lma.de5.net
 zeas.top:443#zeas.top
 vps.cheng2001.top:443#vps.cheng2001.top
 www.visa.com.hk:443#www.visa.com.hk
@@ -19,4 +18,5 @@ cdn.2020111.xyz:443#cdn.2020111.xyz
 store.ubi.com:443#store.ubi.com
 mogas.com:443#mogas.com
 cfip-ct.stoeaves.us.ci:443#cfip-ct.stoeaves.us.ci
+jp.cf.3666888.xyz:443#jp.cf.3666888.xyz
 bestcf.030101.xyz:443#▲ 优选域名 | 分享免费优选网 BestCF.pages.dev | VPS789 7*24监测
